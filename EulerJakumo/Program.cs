@@ -1,13 +1,18 @@
+using EulerJakumo.Models;
+
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllersWithViews(); // Добавление MVC
+
+builder.Services.AddTransient<IApplicationRepository, FakeApplicationRepository>(); // РїРµСЂРµРґР°СЋ IApplicationRepository РІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹ РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ
+builder.Services.AddControllersWithViews(); // Р”РѕР±Р°РІР»РµРЅРёРµ MVC
+
 
 var app = builder.Build();
-app.UseHttpsRedirection(); // Принудительное применение HTTPS
-app.UseStaticFiles(); // Добавление статических фалов (css,  js)
-app.UseRouting(); // Добавляет соответствие маршрута в конвейер ПО промежуточного слоя
+app.UseHttpsRedirection(); // РџСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕРµ РїСЂРёРјРµРЅРµРЅРёРµ HTTPS
+app.UseStaticFiles(); // Р”РѕР±Р°РІР»РµРЅРёРµ СЃС‚Р°С‚РёС‡РµСЃРєРёС… С„Р°Р»РѕРІ (css,  js)
+app.UseRouting(); // Р”РѕР±Р°РІР»СЏРµС‚ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ РјР°СЂС€СЂСѓС‚Р° РІ РєРѕРЅРІРµР№РµСЂ РџРћ РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅРѕРіРѕ СЃР»РѕСЏ
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}"); // От куда начинать
+    pattern: "{controller=Home}/{action=Index}"); // РћС‚ РєСѓРґР° РЅР°С‡РёРЅР°С‚СЊ
 
 app.Run();
