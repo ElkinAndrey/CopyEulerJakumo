@@ -12,5 +12,10 @@ namespace EulerJakumo.Models
         /// Получить текст на странице "О продукте" в виде списка
         /// </summary>
         public List<TextDesign> AboutProductText { get; }
+
+        /// <summary>
+        /// Получить текст на странице "Обратная связь" в виде списка
+        /// </summary>
+        public List<TextDesign> FeedbackText { get; }
     }
 }

@@ -17,5 +17,16 @@ namespace EulerJakumo.Models
                 return FakeDataBase.AboutProductText;
             }
         }
+
+        /// <summary>
+        /// Получить текст на странице "Обратная связь" в виде списка
+        /// </summary>
+        public List<TextDesign> FeedbackText
+        {
+            get
+            {
+                return FakeDataBase.FeedbackText;
+            }
+        }
     }
 }
