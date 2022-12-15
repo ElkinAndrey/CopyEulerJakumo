@@ -28,6 +28,7 @@ namespace EulerJakumo.Models
         {
             new TextDesign() { TextStyle = TextStyle.Title,     Text = "Обратная связь" },
             new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Наша форма обратной связи перестала работать. Пишите на почту jakumo.euler@gmail.com" },
+            new TextDesign() { TextStyle = TextStyle.LineBreak, Text = "" },
         };
     }
 }
