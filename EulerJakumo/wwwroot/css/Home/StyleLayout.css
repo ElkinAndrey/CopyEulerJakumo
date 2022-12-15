@@ -1,0 +1,11 @@
+﻿#head{
+    border: 3px solid black;
+}
+
+#title{
+    font-size: 32px;
+}
+
+.mainButton{
+    text-decoration: none;
+}
