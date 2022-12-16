@@ -40,11 +40,16 @@ namespace EulerJakumo.Models
         /// <summary>
         /// Таблица с задачами
         /// </summary>
-        static public List<Data.Problem> Tasks { get; set; } = new List<Data.Problem>()
+        static public List<Problem> Tasks { get; set; } = new List<Problem>()
         {
-            new Data.Problem() { Number = 1, Name = "Числа, кратные 3 или 5", LinkOriginal = "https://projecteuler.net/problem=1", Text = new List<TextDesign>() {
+            new Problem() { Number = 1, Name = "Числа, кратные 3 или 5", LinkOriginal = "https://projecteuler.net/problem=1", Text = new List<TextDesign>() {
                 new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Если выписать все натуральные числа меньше 10, кратные 3 или 5, то получим 3, 5, 6 и 9. Сумма этих чисел равна 23." },
                 new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Найдите сумму всех чисел меньше 1000, кратных 3 или 5." },
+            }},
+            new Problem() { Number = 2, Name = "Четные числа Фибоначчи", LinkOriginal = "https://projecteuler.net/problem=2", Text = new List<TextDesign>() {
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Каждый следующий элемент ряда Фибоначчи получается при сложении двух предыдущих. Начиная с 1 и 2, первые 10 элементов будут:\r\n\r\n" },
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ..." },
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона." },
             }},
         };
 

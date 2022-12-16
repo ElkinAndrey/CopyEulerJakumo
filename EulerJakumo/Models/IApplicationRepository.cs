@@ -21,6 +21,6 @@ namespace EulerJakumo.Models
         /// <summary>
         /// Список задач
         /// </summary>
-        public List<Data.Problem> Tasks { get; }
+        public List<Problem> Tasks { get; }
     }
 }

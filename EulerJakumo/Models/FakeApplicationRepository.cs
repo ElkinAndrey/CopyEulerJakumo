@@ -29,11 +29,10 @@ namespace EulerJakumo.Models
             }
         }
 
-
         /// <summary>
         /// Список задач
         /// </summary>
-        public List<Data.Problem> Tasks
+        public List<Problem> Tasks
         {
             get
             {
