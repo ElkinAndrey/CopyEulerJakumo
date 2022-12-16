@@ -1,0 +1,19 @@
+﻿@model List<Problem>
+
+@{
+    Layout = "_Layout";
+}
+
+<table>
+    <tr>
+        <th>Номер</th>
+        <th>Заголовок</th>
+    </tr>
+    @foreach (Problem problem in Model)
+    {
+        <tr>
+            <td>@problem.Number</td>
+            <td>@problem.Name</td>
+        </tr>
+    }
+</table>

@@ -39,5 +39,15 @@ namespace EulerJakumo.Controllers
             List<TextDesign> feedbackText = applicationRepository.FeedbackText;
             return View(feedbackText);
         }
+
+        /// <summary>
+        /// Страница с задачами
+        /// </summary>
+        /// <returns>Страница "Home/Problems"</returns>
+        public IActionResult Problems()
+        {
+            List<Problem> tasks = applicationRepository.Tasks;
+            return View(tasks);
+        }
     }
 }
