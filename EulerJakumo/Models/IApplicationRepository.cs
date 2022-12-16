@@ -17,5 +17,7 @@ namespace EulerJakumo.Models
         /// Получить текст на странице "Обратная связь" в виде списка
         /// </summary>
         public List<TextDesign> FeedbackText { get; }
+
+        public List<Data.Task> Tasks { get;  }
     }
 }

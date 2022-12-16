@@ -28,5 +28,17 @@ namespace EulerJakumo.Models
                 return FakeDataBase.FeedbackText;
             }
         }
+
+
+        /// <summary>
+        /// Список задач
+        /// </summary>
+        public List<Data.Task> Tasks
+        {
+            get
+            {
+                return FakeDataBase.Tasks;
+            }
+        }
     }
 }
