@@ -7,6 +7,9 @@ namespace EulerJakumo.Models
 {
     static public class FakeDataBase
     {
+        /// <summary>
+        /// Таблица с текстом о продукте
+        /// </summary>
         static public List<TextDesign> AboutProductText { get; set; } = new List<TextDesign>()
         {
             new TextDesign() { TextStyle = TextStyle.Title,     Text = "О проекте" },
@@ -24,11 +27,26 @@ namespace EulerJakumo.Models
 
         };
 
+        /// <summary>
+        /// Таблица с текстом об обратной связи
+        /// </summary>
         static public List<TextDesign> FeedbackText { get; set; } = new List<TextDesign>()
         {
             new TextDesign() { TextStyle = TextStyle.Title,     Text = "Обратная связь" },
             new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Наша форма обратной связи перестала работать. Пишите на почту jakumo.euler@gmail.com" },
             new TextDesign() { TextStyle = TextStyle.LineBreak, Text = "" },
         };
+
+        /// <summary>
+        /// Таблица с задачами
+        /// </summary>
+        static public List<Data.Task> Tasks { get; set; } = new List<Data.Task>()
+        {
+            new Data.Task() { Number = 1, Name = "Числа, кратные 3 или 5", LinkOriginal = "https://projecteuler.net/problem=1", Text = new List<TextDesign>() {
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Если выписать все натуральные числа меньше 10, кратные 3 или 5, то получим 3, 5, 6 и 9. Сумма этих чисел равна 23." },
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Найдите сумму всех чисел меньше 1000, кратных 3 или 5." },
+            }},
+        };
+
     }
 }
