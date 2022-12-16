@@ -3,7 +3,7 @@
     /// <summary>
     /// Задача
     /// </summary>
-    public class Task
+    public class Problem
     {
         /// <summary>
         /// Номер задачи

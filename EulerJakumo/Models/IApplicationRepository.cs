@@ -18,6 +18,9 @@ namespace EulerJakumo.Models
         /// </summary>
         public List<TextDesign> FeedbackText { get; }
 
-        public List<Data.Task> Tasks { get;  }
+        /// <summary>
+        /// Список задач
+        /// </summary>
+        public List<Data.Problem> Tasks { get; }
     }
 }

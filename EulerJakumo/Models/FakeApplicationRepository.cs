@@ -33,7 +33,7 @@ namespace EulerJakumo.Models
         /// <summary>
         /// Список задач
         /// </summary>
-        public List<Data.Task> Tasks
+        public List<Data.Problem> Tasks
         {
             get
             {
