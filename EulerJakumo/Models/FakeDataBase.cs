@@ -47,9 +47,9 @@ namespace EulerJakumo.Models
                 new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Найдите сумму всех чисел меньше 1000, кратных 3 или 5." },
             }},
             new Problem() { Number = 2, Name = "Четные числа Фибоначчи", LinkOriginal = "https://projecteuler.net/problem=2", Text = new List<TextDesign>() {
-                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Каждый следующий элемент ряда Фибоначчи получается при сложении двух предыдущих. Начиная с 1 и 2, первые 10 элементов будут:\r\n\r\n" },
-                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ..." },
-                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона." },
+                new TextDesign() { TextStyle = TextStyle.Paragraph,         Text = "Каждый следующий элемент ряда Фибоначчи получается при сложении двух предыдущих. Начиная с 1 и 2, первые 10 элементов будут:\r\n\r\n" },
+                new TextDesign() { TextStyle = TextStyle.ParagraphCenter,   Text = "1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ..." },
+                new TextDesign() { TextStyle = TextStyle.Paragraph,         Text = "Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона." },
             }},
         };
 

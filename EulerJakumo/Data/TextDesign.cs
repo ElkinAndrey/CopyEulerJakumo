@@ -5,10 +5,11 @@
     /// </summary>
     public enum TextStyle
     {
-        Title,      // Стиль для заголовка страницы
-        SubTitle,   // Стиль для подзаголовка
-        Paragraph,  // Параграф
-        LineBreak,  // Перенос строки
+        Title,          // Стиль для заголовка страницы
+        SubTitle,       // Стиль для подзаголовка
+        Paragraph,      // Параграф
+        LineBreak,      // Перенос строки
+        ParagraphCenter,// Параграф, с текстом по центру
     }
 
     /// <summary>
