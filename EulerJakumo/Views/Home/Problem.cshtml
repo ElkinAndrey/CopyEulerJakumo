@@ -4,5 +4,39 @@
     Layout = "_Layout";
 }
 
-<div>@Model.Number</div>
-<div>@Model.Name</div>
+<link rel="stylesheet" href="~/css/Home/StyleProblem.css" type="text/css" />
+
+<div class="pageTitle">Задача @Model.Number</div>
+<div id="problemName">@Model.Name</div>
+<div id="problemText">
+    @foreach (var i in @Model.Text)
+    {
+        @switch (i.TextStyle)
+        {
+            case TextStyle.Title:
+                <div class="pageTitle">
+                    @i.Text
+                </div>
+                break;
+            case TextStyle.SubTitle:
+                <div class="pageSubTitle">
+                    @i.Text
+                </div>
+                break;
+            case TextStyle.Paragraph:
+                <p>
+                    @i.Text
+                </p>
+                break;
+            case TextStyle.ParagraphCenter:
+                <p style="text-align: center;">
+                    @i.Text
+                </p>
+                break;
+            case TextStyle.LineBreak:
+                <br />
+                break;
+        }
+    }
+</div>
+<a href=@Model.LinkOriginal>Оригинал</a>

@@ -1,0 +1,12 @@
+﻿#problemName {
+    color: #214f81;
+    font-size: 15.4px;
+    margin: 15.4px 0px;
+    font-weight: bold;
+}
+
+#problemText {
+    border: 1px solid #cccccc;
+    padding: 9px;
+    background: #ffffff;
+}
