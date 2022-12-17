@@ -51,6 +51,18 @@ namespace EulerJakumo.Models
                 new TextDesign() { TextStyle = TextStyle.ParagraphCenter,   Text = "1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ..." },
                 new TextDesign() { TextStyle = TextStyle.Paragraph,         Text = "Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона." },
             }},
+            new Problem() { Number = 3, Name = "Наибольший простой делитель", LinkOriginal = "https://projecteuler.net/problem=3", Text = new List<TextDesign>() {
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Простые делители числа 13195 - это 5, 7, 13 и 29." },
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Каков самый большой делитель числа 600851475143, являющийся простым числом?" },
+            }},
+            new Problem() { Number = 4, Name = "Наибольшее произведение-палиндром", LinkOriginal = "https://projecteuler.net/problem=4", Text = new List<TextDesign>() {
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Число-палиндром с обеих сторон (справа налево и слева направо) читается одинаково. Самое большое число-палиндром, полученное умножением двух двузначных чисел – 9009 = 91 × 99." },
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Найдите самый большой палиндром, полученный умножением двух трехзначных чисел." },
+            }},
+            new Problem() { Number = 5, Name = "Наименьшее кратное", LinkOriginal = "https://projecteuler.net/problem=5", Text = new List<TextDesign>() {
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "2520 - самое маленькое число, которое делится без остатка на все числа от 1 до 10." },
+                new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Какое самое маленькое число делится нацело на все числа от 1 до 20?" },
+            }},
         };
 
     }
