@@ -1,21 +1,34 @@
-﻿@model List<Problem>
+﻿@model ProblemsPageViewModel
 
 @{
     Layout = "_Layout";
 }
 
+<link rel="stylesheet" href="~/css/Home/StyleProblems.css" type="text/css" />
+
 <div class="pageTitle">Задачи</div>
-<p>Всего переведено задач: @(Model.Count).</p>
+<p>Всего переведено задач: @(Model.ProblemsLength).</p>
 <p>
     Оригинал задач на английском языке: <a href="http://projecteuler.net">http://projecteuler.net</a> (внешний сайт)<br/>
     Для ускорения перевода новых задач вы можете сделать небольшое пожертвование.
 </p>
+
+<div id="pages">
+    @Model.NowPage
+    <label>Страница: </label>
+    @for (int i = 1; i <= Model.AmountPages; i++)
+    {
+        <a asp-controller="Home" asp-action="Problems" asp-route-page=@i class=@(i == Model.NowPage ? "nowPage" : "page")>@i</a>
+        
+    }
+</div>
+
 <table>
     <tr>
         <th>Номер</th>
         <th>Заголовок</th>
     </tr>
-    @foreach (Problem problem in Model)
+    @foreach (Problem problem in Model.Problems)
     {
         <tr>
             <td>@problem.Number</td>

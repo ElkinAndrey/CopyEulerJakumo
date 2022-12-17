@@ -1,7 +1,7 @@
 ﻿using EulerJakumo.Data;
 using EulerJakumo.Models;
+using EulerJakumo.Models.ViewModels.Home;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace EulerJakumo.Controllers
 {
@@ -10,7 +10,7 @@ namespace EulerJakumo.Controllers
         /// <summary>
         /// Количество задач на одной странице
         /// </summary>
-        private int pageSize = 3;
+        private int pageSize = 2;
 
         /// <summary>
         /// Репозиторий приложения
@@ -53,8 +53,14 @@ namespace EulerJakumo.Controllers
         /// <returns>Страница "Problems"</returns>
         public IActionResult Problems(int page = 1)
         {
-            List<Problem> tasks = applicationRepository.PartProblems((page - 1) * pageSize, pageSize);
-            return View(tasks);
+            ProblemsPageViewModel model = new ProblemsPageViewModel()
+            {
+                Problems = applicationRepository.PartProblems((page - 1) * pageSize, pageSize),
+                AmountPages = (applicationRepository.ProblemsLength - 1) / pageSize + 1,
+                ProblemsLength = applicationRepository.ProblemsLength,
+                NowPage = page,
+            };
+            return View(model);
         }
 
         /// <summary>

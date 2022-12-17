@@ -1,0 +1,21 @@
+﻿.page {
+    text-decoration: none;
+    font-weight: bold;
+    color: #676c9c;
+    margin-right: 5px;
+}
+
+    .page:hover {
+        text-decoration: underline;
+    }
+
+.nowPage {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+    .nowPage:hover {
+        text-decoration: underline;
+    }
