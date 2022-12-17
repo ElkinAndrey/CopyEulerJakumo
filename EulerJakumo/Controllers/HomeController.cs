@@ -24,7 +24,7 @@ namespace EulerJakumo.Controllers
         /// <summary>
         /// Страница "О проекте". Запускается по умолчанию
         /// </summary>
-        /// <returns>Страница "Home/Index"</returns>
+        /// <returns>Страница "Index"</returns>
         public IActionResult Index()
         {
             List<TextDesign> aboutProductText = applicationRepository.AboutProductText;
@@ -34,7 +34,7 @@ namespace EulerJakumo.Controllers
         /// <summary>
         /// Страница "Обратная связь".
         /// </summary>
-        /// <returns>Страница "Home/Feedback"</returns>
+        /// <returns>Страница "Feedback"</returns>
         public IActionResult Feedback()
         {
             List<TextDesign> feedbackText = applicationRepository.FeedbackText;
@@ -44,13 +44,19 @@ namespace EulerJakumo.Controllers
         /// <summary>
         /// Страница с задачами
         /// </summary>
-        /// <returns>Страница "Home/Problems"</returns>
+        /// <returns>Страница "Problems"</returns>
         public IActionResult Problems()
         {
             List<Problem> tasks = applicationRepository.Problems;
             return View(tasks);
         }
 
+        /// <summary>
+        /// Страница с задачей
+        /// </summary>
+        /// <param name="number">Номер задачи</param>
+        /// <returns>Страница "Problems/НомерПроблемы
+        /// "</returns>
         public IActionResult Problem(int number)
         {
             Problem? problem = applicationRepository.ProblemByNumber(number);
