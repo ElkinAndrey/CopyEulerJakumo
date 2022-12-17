@@ -8,6 +8,11 @@ namespace EulerJakumo.Controllers
     public class HomeController : Controller
     {
         /// <summary>
+        /// Количество задач на одной странице
+        /// </summary>
+        private int pageSize = 3;
+
+        /// <summary>
         /// Репозиторий приложения
         /// </summary>
         private IApplicationRepository applicationRepository;
@@ -44,10 +49,11 @@ namespace EulerJakumo.Controllers
         /// <summary>
         /// Страница с задачами
         /// </summary>
+        /// <param name="page">Номер страницы</param>
         /// <returns>Страница "Problems"</returns>
-        public IActionResult Problems()
+        public IActionResult Problems(int page = 1)
         {
-            List<Problem> tasks = applicationRepository.Problems;
+            List<Problem> tasks = applicationRepository.PartProblems((page - 1) * pageSize, pageSize);
             return View(tasks);
         }
 
