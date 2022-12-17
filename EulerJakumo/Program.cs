@@ -20,7 +20,7 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{action=Index}",
+    pattern: "{action=AboutProject}",
     defaults: new { controller = "Home" }); // От куда начинать
 
 app.Run();

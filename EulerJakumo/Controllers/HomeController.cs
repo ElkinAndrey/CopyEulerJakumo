@@ -24,8 +24,8 @@ namespace EulerJakumo.Controllers
         /// <summary>
         /// Страница "О проекте". Запускается по умолчанию
         /// </summary>
-        /// <returns>Страница "Index"</returns>
-        public IActionResult Index()
+        /// <returns>Страница "AboutProject"</returns>
+        public IActionResult AboutProject()
         {
             List<TextDesign> aboutProductText = applicationRepository.AboutProductText;
             return View(aboutProductText);
