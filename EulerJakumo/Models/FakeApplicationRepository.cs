@@ -78,5 +78,16 @@ namespace EulerJakumo.Models
                 problems = FakeDataBase.Problems.GetRange(startIndex, length);
             return problems;
         }
+
+        /// <summary>
+        /// Получить количетсво задач
+        /// </summary>
+        public int ProblemsLength
+        {
+            get
+            {
+                return FakeDataBase.Problems.Count;
+            }
+        }
     }
 }

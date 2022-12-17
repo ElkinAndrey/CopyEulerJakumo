@@ -39,5 +39,10 @@ namespace EulerJakumo.Models
         /// <param name="length">Количество взятых задач</param>
         /// <returns>Задачи</returns>
         public List<Problem> PartProblems(int startIndex, int length);
+
+        /// <summary>
+        /// Получить количетсво задач
+        /// </summary>
+        public int ProblemsLength { get; }
     }
 }
