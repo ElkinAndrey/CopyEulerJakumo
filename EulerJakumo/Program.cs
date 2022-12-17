@@ -1,4 +1,6 @@
+using EulerJakumo.Data;
 using EulerJakumo.Models;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,7 @@ app.UseRouting(); // Добавляет соответствие маршрут�
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}"); // От куда начинать
+    pattern: "{action=Index}",
+    defaults: new { controller = "Home" }); // От куда начинать
 
 app.Run();
