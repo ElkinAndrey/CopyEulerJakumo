@@ -15,7 +15,7 @@ app.UseRouting(); // Добавляет соответствие маршрут�
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "Problems/{number}",
+    pattern: "Problems/{action}/{number}",
     defaults: new { controller = "Home", action = "Problem" }); // От куда начинать
 
 app.MapControllerRoute(
