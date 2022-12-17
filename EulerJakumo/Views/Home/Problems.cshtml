@@ -14,7 +14,6 @@
 </p>
 
 <div id="pages">
-    @Model.NowPage
     <label>Страница: </label>
     @for (int i = 1; i <= Model.AmountPages; i++)
     {
@@ -36,3 +35,12 @@
         </tr>
     }
 </table>
+
+<div id="pages">
+    <label>Страница: </label>
+    @for (int i = 1; i <= Model.AmountPages; i++)
+    {
+            <a asp-controller="Home" asp-action="Problems" asp-route-page=@i class=@(i == Model.NowPage ? "nowPage" : "page")>@i</a>
+
+    }
+</div>
