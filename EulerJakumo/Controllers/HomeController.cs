@@ -60,7 +60,20 @@ namespace EulerJakumo.Controllers
         public IActionResult Problem(int number)
         {
             Problem? problem = applicationRepository.ProblemByNumber(number);
+            if (problem == null)
+            {
+                return RedirectToAction("Denied");
+            }
             return View(problem);
+        }
+
+        /// <summary>
+        /// Страница, которая появиться, если попытаться перейти к несуществующей странице
+        /// </summary>
+        /// <returns>Страница "Denied"</returns>
+        public IActionResult Denied()
+        {
+            return View();
         }
     }
 }
