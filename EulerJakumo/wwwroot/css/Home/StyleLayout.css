@@ -2,8 +2,11 @@
     border: 3px solid black;
 }
 
-#title{
-    font-size: 32px;
+#title {
+    font-size: 38px;
+    text-decoration: none;
+    color: #214f81;
+    font-weight: bold;
 }
 
 .mainButton{
