@@ -62,15 +62,16 @@ namespace EulerJakumo.Models
         /// Получить часть задачь из базы данных, чтобы не перегружать сервер выводом всех задач одновременно.
         /// При попытке взять с конца больше элементов, чем есть (если startIndex + length выходит за границы списка),
         /// будут возвращены элементы с startIndex, до конца. Ошибка вызвана не будет.
+        /// При указании начального индекса, имеющего значение больше или меньшеколичества задач, будет возвращаться 
+        /// пустой список.
         /// </summary>
         /// <param name="startIndex">Индекс, с которого будут взяты задачи</param>
         /// <param name="length">Количество взятых задач</param>
         /// <returns>Задачи</returns>
-        /// <exception cref="IndexOutOfRangeException">Вызывается, если начальный индекс (startIndex) больше или равен количеству задач</exception>
         public List<Problem> PartProblems(int startIndex, int length)
         {
-            if (startIndex >= FakeDataBase.Problems.Count)
-                throw new IndexOutOfRangeException();
+            if (startIndex >= FakeDataBase.Problems.Count || startIndex < 0)
+                return new List<Problem>();
             List<Problem> problems;
             if (startIndex + length > FakeDataBase.Problems.Count)
                 problems = FakeDataBase.Problems.GetRange(startIndex, FakeDataBase.Problems.Count - startIndex);
