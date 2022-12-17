@@ -32,12 +32,30 @@ namespace EulerJakumo.Models
         /// <summary>
         /// Список задач
         /// </summary>
-        public List<Problem> Tasks
+        public List<Problem> Problems
         {
             get
             {
-                return FakeDataBase.Tasks;
+                return FakeDataBase.Problems;
             }
+        }
+
+
+        /// <summary>
+        /// Получить задачу по номеру
+        /// </summary>
+        /// <param name="number">Номер задачи</param>
+        /// <returns>Задача</returns>
+        public Problem? ProblemByNumber(int number)
+        {
+            foreach(Problem problem in FakeDataBase.Problems)
+            {
+                if (problem.Number == number)
+                {
+                    return problem;
+                }
+            }
+            return null;
         }
     }
 }

@@ -21,6 +21,13 @@ namespace EulerJakumo.Models
         /// <summary>
         /// Список задач
         /// </summary>
-        public List<Problem> Tasks { get; }
+        public List<Problem> Problems { get; }
+
+        /// <summary>
+        /// Получить задачу по номеру
+        /// </summary>
+        /// <param name="number">Номер задачи</param>
+        /// <returns>Задача</returns>
+        public Problem? ProblemByNumber(int number);
     }
 }

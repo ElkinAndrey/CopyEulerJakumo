@@ -40,7 +40,7 @@ namespace EulerJakumo.Models
         /// <summary>
         /// Таблица с задачами
         /// </summary>
-        static public List<Problem> Tasks { get; set; } = new List<Problem>()
+        static public List<Problem> Problems { get; set; } = new List<Problem>()
         {
             new Problem() { Number = 1, Name = "Числа, кратные 3 или 5", LinkOriginal = "https://projecteuler.net/problem=1", Text = new List<TextDesign>() {
                 new TextDesign() { TextStyle = TextStyle.Paragraph, Text = "Если выписать все натуральные числа меньше 10, кратные 3 или 5, то получим 3, 5, 6 и 9. Сумма этих чисел равна 23." },
