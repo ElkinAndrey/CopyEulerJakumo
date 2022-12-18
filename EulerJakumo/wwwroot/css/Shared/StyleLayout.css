@@ -12,6 +12,7 @@
     border-radius: 10px;
     background: #000 url(../images/topbg.jpg);
     padding: 17px;
+    margin-bottom: 15px;
 }
 
 #logo{
@@ -43,7 +44,16 @@
     font-weight: bold;
 }
 
-.mainButton{
+#body {
+    border: 3px solid #cccccc;
+    border-radius: 10px;
+    background: #f1f2f3;
+    padding: 7px;
+    padding-bottom: 17px;
+    margin-bottom: 15px;
+}
+
+.mainButton {
     text-decoration: none;
 }
 
