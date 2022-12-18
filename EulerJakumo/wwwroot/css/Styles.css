@@ -9,6 +9,10 @@ body {
     background: #ffffff url(images/bodybg.jpg);
 }
 
+a {
+    color: #676c9c;
+}
+
 .pageTitle {
     color: #214f81;
     font-size: 22px;

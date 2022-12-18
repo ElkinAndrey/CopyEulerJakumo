@@ -28,7 +28,6 @@
     #links a {
         margin: 10px;
         font-size: 18px;
-        color: #676c9c;
         font-weight: bold;
     }
 
@@ -68,6 +67,10 @@
         text-decoration: none;
         font-size: 11.2px;
     }
+
+        #bottom a:hover {
+            text-decoration: underline;
+        }
 
 #original {
     font-size: 11.2px;
