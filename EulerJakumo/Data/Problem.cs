@@ -5,7 +5,11 @@
     /// </summary>
     public class Problem
     {
+        /// <summary>
+        /// Однозначный ключ
+        /// </summary>
         public int Id { get; set; } = 0;
+
         /// <summary>
         /// Номер задачи
         /// </summary>

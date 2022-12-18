@@ -17,7 +17,11 @@
     /// /// </summary>
     public class TextDesign
     {
+        /// <summary>
+        /// Однозначный ключ
+        /// </summary>
         public int Id { get; set; } = 0;
+
         /// <summary>
         /// Стиль текста
         /// </summary>
