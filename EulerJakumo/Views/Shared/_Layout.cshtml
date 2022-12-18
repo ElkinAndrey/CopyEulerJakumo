@@ -6,22 +6,24 @@
     <link rel="stylesheet" href="~/css/Styles.css" type="text/css" />
 </head>
 <body>
-    <div id="head">
-        <div>
-            <a asp-controller="Home" asp-action="AboutProject" id="title">Проект Эйлера</a>
+    <div id="center">
+        <div id="head">
+            <div>
+                <a asp-controller="Home" asp-action="AboutProject" id="title">Проект Эйлера</a>
+            </div>
+            <div>
+                <a asp-controller="Home" asp-action="AboutProject" class="mainButton">О проекте</a>
+                <a asp-controller="Home" asp-action="Problems" class="mainButton">Задачи</a>
+                <a asp-controller="Home" asp-action="Feedback" class="mainButton">Обратная связь</a>
+                <a href="https://projecteuler.net/" class="mainButton">Project Euler.net</a>
+            </div>    
         </div>
         <div>
-            <a asp-controller="Home" asp-action="AboutProject" class="mainButton">О проекте</a>
-            <a asp-controller="Home" asp-action="Problems" class="mainButton">Задачи</a>
-            <a asp-controller="Home" asp-action="Feedback" class="mainButton">Обратная связь</a>
-            <a href="https://projecteuler.net/" class="mainButton">Project Euler.net</a>
-        </div>    
-    </div>
-    <div>
-        @RenderBody()
-    </div>
-    <div id="bottom">
-        © Проект Эйлера | Translated problems from <a href="https://projecteuler.net/">ProjectEuler.net</a>
+            @RenderBody()
+        </div>
+        <div id="bottom">
+            © Проект Эйлера | Translated problems from <a href="https://projecteuler.net/">ProjectEuler.net</a>
+        </div>
     </div>
 </body>
 </html>
