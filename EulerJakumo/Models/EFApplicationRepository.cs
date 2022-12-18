@@ -15,7 +15,10 @@ namespace EulerJakumo.Models
 
         public List<TextDesign> FeedbackText => throw new NotImplementedException();
 
-        public List<Problem> Problems => throw new NotImplementedException();
+        /// <summary>
+        /// Список задач
+        /// </summary>
+        public List<Problem> Problems => context.Problems.ToList();
 
         public int ProblemsLength => throw new NotImplementedException();
 
