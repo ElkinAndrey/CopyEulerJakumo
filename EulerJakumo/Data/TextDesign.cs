@@ -17,6 +17,7 @@
     /// /// </summary>
     public class TextDesign
     {
+        public int Id { get; set; } = 0;
         /// <summary>
         /// Стиль текста
         /// </summary>

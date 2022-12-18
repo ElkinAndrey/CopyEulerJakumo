@@ -5,6 +5,7 @@
     /// </summary>
     public class Problem
     {
+        public int Id { get; set; } = 0;
         /// <summary>
         /// Номер задачи
         /// </summary>
