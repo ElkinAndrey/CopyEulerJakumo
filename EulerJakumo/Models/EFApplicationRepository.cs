@@ -20,7 +20,10 @@ namespace EulerJakumo.Models
         /// </summary>
         public List<Problem> Problems => context.Problems.ToList();
 
-        public int ProblemsLength => throw new NotImplementedException();
+        /// <summary>
+        /// Получить количетсво задач
+        /// </summary>
+        public int ProblemsLength => context.Problems.Count();
 
         /// <summary>
         /// Метод для добавление новой проблемы в базы данных
