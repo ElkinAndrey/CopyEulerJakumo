@@ -10,9 +10,25 @@ namespace EulerJakumo.Models
         public EFApplicationRepository(ApplicationDbContext context)
         {
             this.context = context;
+            /*foreach (var i in FakeDataBase.AboutProductText)
+                context.AboutProductText.Add(new AboutProduct { Text = i.Text, TextStyle = i.TextStyle });
+            context.Problems.AddRange(FakeDataBase.Problems);
+            context.SaveChanges();*/
         }
 
-        public List<TextDesign> AboutProductText => throw new NotImplementedException();
+        /// <summary>
+        /// Получить текст на странице "О продукте" в виде списка
+        /// </summary>
+        public List<TextDesign> AboutProductText 
+        {
+            get
+            {
+                List<TextDesign> aboutProductText = new List<TextDesign>();
+                foreach (var i in context.AboutProductText)
+                    aboutProductText.Add(i);
+                return aboutProductText;
+            }
+        }
 
         public List<TextDesign> FeedbackText => throw new NotImplementedException();
 
