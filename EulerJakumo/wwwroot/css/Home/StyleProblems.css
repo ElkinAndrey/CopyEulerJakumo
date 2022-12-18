@@ -18,3 +18,42 @@
     .nowPage:hover {
         text-decoration: underline;
     }
+
+table {
+    min-width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+table a {
+    text-decoration: none;
+}
+    table a:hover {
+        text-decoration: underline;
+    }
+
+th:nth-child(1) {
+    width: 0px;
+}
+
+td:nth-child(1) {
+    width: 0px;
+    text-align: right;
+}
+
+th {
+    color: #888888;
+    text-align: left;
+    border: 1px solid #cccccc;
+    padding: 4px 7px;
+    font-size: 15.4px;
+}
+
+td {
+    border: 1px solid #cccccc;
+    padding: 4px 7px;
+}
+
+#taskTitle {
+    min-width: 100%;
+}
