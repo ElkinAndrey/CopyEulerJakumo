@@ -66,6 +66,22 @@ namespace EulerJakumo.Migrations
                     b.HasIndex("ProblemId");
 
                     b.ToTable("TextDesign");
+
+                    b.UseTptMappingStrategy();
+                });
+
+            modelBuilder.Entity("EulerJakumo.Models.AboutProduct", b =>
+                {
+                    b.HasBaseType("EulerJakumo.Data.TextDesign");
+
+                    b.ToTable("AboutProduct");
+                });
+
+            modelBuilder.Entity("EulerJakumo.Models.Feedback", b =>
+                {
+                    b.HasBaseType("EulerJakumo.Data.TextDesign");
+
+                    b.ToTable("Feedback");
                 });
 
             modelBuilder.Entity("EulerJakumo.Data.TextDesign", b =>
@@ -73,6 +89,24 @@ namespace EulerJakumo.Migrations
                     b.HasOne("EulerJakumo.Data.Problem", null)
                         .WithMany("Text")
                         .HasForeignKey("ProblemId");
+                });
+
+            modelBuilder.Entity("EulerJakumo.Models.AboutProduct", b =>
+                {
+                    b.HasOne("EulerJakumo.Data.TextDesign", null)
+                        .WithOne()
+                        .HasForeignKey("EulerJakumo.Models.AboutProduct", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("EulerJakumo.Models.Feedback", b =>
+                {
+                    b.HasOne("EulerJakumo.Data.TextDesign", null)
+                        .WithOne()
+                        .HasForeignKey("EulerJakumo.Models.Feedback", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("EulerJakumo.Data.Problem", b =>

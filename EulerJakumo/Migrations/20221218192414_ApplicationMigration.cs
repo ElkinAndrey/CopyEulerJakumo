@@ -45,6 +45,40 @@ namespace EulerJakumo.Migrations
                         principalColumn: "Id");
                 });
 
+            migrationBuilder.CreateTable(
+                name: "AboutProduct",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AboutProduct", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AboutProduct_TextDesign_Id",
+                        column: x => x.Id,
+                        principalTable: "TextDesign",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Feedback",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Feedback", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Feedback_TextDesign_Id",
+                        column: x => x.Id,
+                        principalTable: "TextDesign",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_TextDesign_ProblemId",
                 table: "TextDesign",
@@ -54,6 +88,12 @@ namespace EulerJakumo.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "AboutProduct");
+
+            migrationBuilder.DropTable(
+                name: "Feedback");
+
             migrationBuilder.DropTable(
                 name: "TextDesign");
 
