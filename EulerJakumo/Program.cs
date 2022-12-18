@@ -9,7 +9,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database = EulerJakumoDataBase; Trusted_Connection = True")
 );
 
-builder.Services.AddTransient<IApplicationRepository, FakeApplicationRepository>(); // передаю IApplicationRepository в конструкторы контроллеров
+builder.Services.AddTransient<IApplicationRepository, EFApplicationRepository>(); // передаю IApplicationRepository в конструкторы контроллеров
 builder.Services.AddControllersWithViews(); // Добавление MVC
 
 
@@ -30,7 +30,7 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{action=AboutProject}",
+    pattern: "{action=Problems}",
     defaults: new { controller = "Home" });
 
 app.Run();
