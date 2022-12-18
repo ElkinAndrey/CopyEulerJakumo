@@ -90,5 +90,14 @@ namespace EulerJakumo.Models
                 return FakeDataBase.Problems.Count;
             }
         }
+
+        /// <summary>
+        /// Метод для добавление новой проблемы в базы данных
+        /// </summary>
+        /// <param name="problem">Добавляемая проблема</param>
+        public void AddProblem(Problem problem)
+        {
+            FakeDataBase.Problems.Add(problem);
+        }
     }
 }

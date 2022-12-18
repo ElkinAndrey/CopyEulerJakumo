@@ -46,5 +46,11 @@ namespace EulerJakumo.Models
         /// Получить количетсво задач
         /// </summary>
         public int ProblemsLength { get; }
+
+        /// <summary>
+        /// Метод для добавление новой проблемы в базы данных
+        /// </summary>
+        /// <param name="problem">Добавляемая проблема</param>
+        public void AddProblem(Problem problem);
     }
 }
