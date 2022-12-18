@@ -12,9 +12,9 @@
                 <a asp-controller="Home" asp-action="AboutProject" id="title">Проект Эйлера</a>
             </div>
             <div id="links">
-                <a asp-controller="Home" asp-action="AboutProject" class="mainButton">О проекте</a>
-                <a asp-controller="Home" asp-action="Problems" class="mainButton">Задачи</a>
-                <a asp-controller="Home" asp-action="Feedback" class="mainButton">Обратная связь</a>
+                <a asp-controller="Home" asp-action="AboutProject" class="mainButton" style=@(ViewBag.Action == "AboutProject" ? "color: #9c9c9c;" : "")>О проекте</a>
+                <a asp-controller="Home" asp-action="Problems" class="mainButton" style=@(ViewBag.Action == "Problems" ? "color: #9c9c9c;" : "")>Задачи</a>
+                <a asp-controller="Home" asp-action="Feedback" class="mainButton" style=@(ViewBag.Action == "Feedback" ? "color: #9c9c9c;" : "")>Обратная связь</a>
                 <a href="https://projecteuler.net/" class="mainButton">Project Euler.net</a>
             </div>    
         </div>

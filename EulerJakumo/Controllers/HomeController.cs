@@ -32,6 +32,7 @@ namespace EulerJakumo.Controllers
         /// <returns>Страница "AboutProject"</returns>
         public IActionResult AboutProject()
         {
+            ViewBag.Action = "AboutProject";
             List<TextDesign> aboutProductText = applicationRepository.AboutProductText;
             return View(aboutProductText);
         }
@@ -42,6 +43,7 @@ namespace EulerJakumo.Controllers
         /// <returns>Страница "Feedback"</returns>
         public IActionResult Feedback()
         {
+            ViewBag.Action = "Feedback";
             List<TextDesign> feedbackText = applicationRepository.FeedbackText;
             return View(feedbackText);
         }
@@ -53,6 +55,7 @@ namespace EulerJakumo.Controllers
         /// <returns>Страница "Problems"</returns>
         public IActionResult Problems(int page = 1)
         {
+            ViewBag.Action = "Problems";
             ProblemsPageViewModel model = new ProblemsPageViewModel()
             {
                 Problems = applicationRepository.PartProblems((page - 1) * pageSize, pageSize),
@@ -71,6 +74,7 @@ namespace EulerJakumo.Controllers
         /// "</returns>
         public IActionResult Problem(int number)
         {
+            ViewBag.Action = "Problems";
             Problem? problem = applicationRepository.ProblemByNumber(number);
             if (problem == null)
             {
@@ -85,6 +89,7 @@ namespace EulerJakumo.Controllers
         /// <returns>Страница "Denied"</returns>
         public IActionResult Denied()
         {
+            ViewBag.Action = "Problems";
             return View();
         }
     }
