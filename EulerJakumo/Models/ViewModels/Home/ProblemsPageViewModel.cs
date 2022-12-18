@@ -2,6 +2,9 @@
 
 namespace EulerJakumo.Models.ViewModels.Home
 {
+    /// <summary>
+    /// Вью модель для передачи информации на страницу с задачами
+    /// </summary>
     public class ProblemsPageViewModel
     {
         /// <summary>

@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EulerJakumo.Controllers
 {
+    /// <summary>
+    /// Контроллер главной страницы
+    /// </summary>
     public class HomeController : Controller
     {
         /// <summary>

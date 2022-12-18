@@ -5,6 +5,9 @@ using System.Security.Principal;
 
 namespace EulerJakumo.Models
 {
+    /// <summary>
+    /// Фейковая база данных 
+    /// </summary>
     static public class FakeDataBase
     {
         /// <summary>
