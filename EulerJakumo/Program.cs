@@ -1,8 +1,13 @@
 using EulerJakumo.Data;
 using EulerJakumo.Models;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database = EulerJakumoDataBase; Trusted_Connection = True")
+);
 
 builder.Services.AddTransient<IApplicationRepository, FakeApplicationRepository>(); // передаю IApplicationRepository в конструкторы контроллеров
 builder.Services.AddControllersWithViews(); // Добавление MVC
