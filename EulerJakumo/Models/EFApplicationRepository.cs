@@ -19,9 +19,14 @@ namespace EulerJakumo.Models
 
         public int ProblemsLength => throw new NotImplementedException();
 
+        /// <summary>
+        /// Метод для добавление новой проблемы в базы данных
+        /// </summary>
+        /// <param name="problem">Добавляемая проблема</param>
         public void AddProblem(Problem problem)
         {
-            throw new NotImplementedException();
+            context.Problems.Add(problem);
+            context.SaveChanges();
         }
 
         public List<Problem> PartProblems(int startIndex, int length)
