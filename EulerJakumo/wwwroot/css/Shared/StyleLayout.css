@@ -8,8 +8,33 @@
 }
 
 #head {
-    border: 3px solid black;
+    border: 3px solid #cccccc;
+    border-radius: 10px;
+    background: #000 url(../images/topbg.jpg);
+    padding: 17px;
 }
+
+#logo{
+    margin-bottom: 10px; 
+}
+
+#links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    #links a {
+        margin: 10px;
+        font-size: 18px;
+        color: #676c9c;
+        font-weight: bold;
+    }
+
+        #links a:hover {
+            color: #000000;
+        }
+
 
 #title {
     font-size: 38px;
