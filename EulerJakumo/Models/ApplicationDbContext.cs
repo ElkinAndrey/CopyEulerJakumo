@@ -10,5 +10,13 @@ namespace EulerJakumo.Models
         public DbSet<TextDesign> FeedbackText { get; set; }
         public DbSet<Problem> Problems { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Problem>()
+                .HasMany(p => p.Text);
+        }
     }
 }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EulerJakumo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221218165715_ApplicationMigration")]
+    [Migration("20221218184056_ApplicationMigration")]
     partial class ApplicationMigration
     {
         /// <inheritdoc />

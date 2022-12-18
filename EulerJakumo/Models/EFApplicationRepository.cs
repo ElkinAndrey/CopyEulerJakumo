@@ -1,4 +1,5 @@
 ﻿using EulerJakumo.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace EulerJakumo.Models
 {
@@ -18,7 +19,9 @@ namespace EulerJakumo.Models
         /// <summary>
         /// Список задач
         /// </summary>
-        public List<Problem> Problems => context.Problems.ToList();
+        public List<Problem> Problems => context.Problems
+            .Include(p => p.Text)
+            .ToList();
 
         /// <summary>
         /// Получить количетсво задач
@@ -67,9 +70,17 @@ namespace EulerJakumo.Models
             return result;
         }
 
+        /// <summary>
+        /// Получить задачу по номеру
+        /// </summary>
+        /// <param name="number">Номер задачи</param>
+        /// <returns>Задача</returns>
         public Problem? ProblemByNumber(int number)
         {
-            throw new NotImplementedException();
+            return context.Problems
+                .Include(p => p.Text)
+                .Where(p => p.Number == number)
+                .FirstOrDefault();
         }
     }
 }
