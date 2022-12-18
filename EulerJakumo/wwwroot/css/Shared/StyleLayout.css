@@ -58,5 +58,18 @@
 }
 
 #bottom {
-    border: 3px solid black;
+    border: 3px solid #cccccc;
+    border-radius: 10px;
+    padding: 5px;
+    background: #f1f2f3;
+}
+
+    #bottom a {
+        text-decoration: none;
+        font-size: 11.2px;
+    }
+
+#original {
+    font-size: 11.2px;
+    text-align: right;
 }
