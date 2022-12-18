@@ -13,6 +13,8 @@ namespace EulerJakumo.Models
             /*foreach (var i in FakeDataBase.AboutProductText)
                 context.AboutProductText.Add(new AboutProduct { Text = i.Text, TextStyle = i.TextStyle });
             context.Problems.AddRange(FakeDataBase.Problems);
+            foreach (var i in FakeDataBase.FeedbackText)
+                context.FeedbackText.Add(new Feedback { Text = i.Text, TextStyle = i.TextStyle });
             context.SaveChanges();*/
         }
 
@@ -30,7 +32,19 @@ namespace EulerJakumo.Models
             }
         }
 
-        public List<TextDesign> FeedbackText => throw new NotImplementedException();
+        /// <summary>
+        /// Получить текст на странице "Обратная связь" в виде списка
+        /// </summary>
+        public List<TextDesign> FeedbackText
+        {
+            get
+            {
+                List<TextDesign> feedbackText = new List<TextDesign>();
+                foreach (var i in context.FeedbackText)
+                    feedbackText.Add(i);
+                return feedbackText;
+            }
+        }
 
         /// <summary>
         /// Список задач
